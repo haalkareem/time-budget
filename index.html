@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Time Budget</title>
+  <meta name="description" content="A personal weekly time-budget tracker.">
+
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F4F3EF">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#101214">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- iPhone home-screen app -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Time Budget">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="view" tabindex="-1"></main>
+
+  <nav class="tabbar" aria-label="Sections">
+    <button type="button" class="tab" data-tab="today" aria-current="page">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+      <span>Today</span>
+    </button>
+    <button type="button" class="tab" data-tab="week">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V10M12 19V5M19 19v-6"/></svg>
+      <span>Week</span>
+    </button>
+    <button type="button" class="tab" data-tab="settings">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></svg>
+      <span>Settings</span>
+    </button>
+  </nav>
+
+  <div id="sheet-root"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <input id="import-file" type="file" accept="application/json,.json" hidden>
+
+  <noscript><p style="padding:24px">Time Budget needs JavaScript to run.</p></noscript>
+  <script src="app.js" defer></script>
+</body>
+</html>
